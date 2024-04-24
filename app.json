@@ -1,0 +1,11 @@
+{
+  "name": "ReactNativeAnimation",
+  "displayName": "ReactNativeAnimation",
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "a4912f3f-a06e-42be-98c2-925235840489"
+      }
+    }
+  }
+}
