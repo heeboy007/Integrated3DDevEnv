@@ -36,6 +36,7 @@ const babelLoaderConfiguration = {
             // Re-write paths to import only the modules needed by the app
             plugins: [
                 'react-native-web',
+                'inline-react-svg',
                 ["module-resolver", {
                     "alias": {
                         "^react-native$": "react-native-web"
@@ -54,15 +55,25 @@ const typeScriptLoaderConfiguration = {
 
 // This is needed for webpack to import static images in JavaScript files.
 const imageLoaderConfiguration = {
-    test: /\.(gif|jpe?g|png|svg)$/,
+    test: /\.(gif|jpe?g|png)$/,
     use: {
-        loader: 'url-loader',
+        loader: 'file-loader',
         options: {
-            name: '[name].[ext]',
-            esModule: false,
-        }
+            outputPath: 'assets/images/'
+        },
     }
 };
+
+//svg loader
+const svgLoaderConfiguration = {
+    test: /\.svg$/,
+    exclude: /node_modules/,
+    use: [
+        {
+            loader: '@svgr/webpack',
+        },
+    ],
+}
 
 const fontLoaderConfiguration = {
     test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -113,6 +124,7 @@ module.exports = {
             typeScriptLoaderConfiguration,
             babelLoaderConfiguration,
             imageLoaderConfiguration,
+            svgLoaderConfiguration,
             fontLoaderConfiguration,
             glTFLoaderConfiguration
         ]
@@ -123,7 +135,7 @@ module.exports = {
         alias: {
             'react-native$': 'react-native-web',
             'react-native-linear-gradient$': 'react-native-web-linear-gradient',
-            'react-native-svg$': 'react-native-svg-web',
+            'react-native-svg': 'svgs',
             '@react-three/fiber/native$': '@react-three/fiber/native/dist/react-three-fiber-native.esm',
         },
         fallback: {

@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import RootNavigator from './src/navigator/RootNavigator';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {LogBox} from 'react-native';
+import {LogBox, ScrollView} from 'react-native';
 
 const App = () => {
   // ignore Warning build/three.js
