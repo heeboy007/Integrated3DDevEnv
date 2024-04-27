@@ -2,7 +2,6 @@
 import {StyleSheet, Text, useWindowDimensions} from 'react-native';
 import React, {useState} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {SystemBars} from 'react-native-bars';
 import LineChart from './src/components/LineChart';
 import {data} from './src/data/data';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
@@ -25,7 +24,6 @@ const LineChartScreen = () => {
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       <SafeAreaView style={styles.container}>
-        <SystemBars animated={true} barStyle={'light-content'} />
         <Text style={styles.text}>{selectedDate} Expenses</Text>
         <AnimatedText selectedValue={selectedValue} font={font} />
         <LineChart

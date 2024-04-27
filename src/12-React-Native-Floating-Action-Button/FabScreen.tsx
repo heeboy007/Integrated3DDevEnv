@@ -5,13 +5,11 @@ import FirstType from './src/components/FirstType';
 import SecondType from './src/components/SecondType';
 import ThirdType from './src/components/ThirdType';
 import FourthType from './src/components/FourthType';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native';
 const FabScreen = () => {
   const [type, setType] = useState('first');
   return (
-    //If you're not using react-native-bars, you can remove these edges
-    // and import SafeAreaView from react-native.
-    <SafeAreaView style={styles.container} edges={['bottom', 'right', 'left']}>
+    <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={{flexGrow: 1}}>
         <Button title="First Type" onPress={() => setType('first')} />
         <Button title="Second Type" onPress={() => setType('second')} />

@@ -22,9 +22,8 @@ const Toast = forwardRef(({}, ref) => {
   const [toastType, setToastType] = useState('success');
   const [toastText, setToastText] = useState('');
   const [toastDuration, setToastDuration] = useState(0);
-  // If you're not using react-native-bars, please use the one below by uncommenting it
-  const TOP_VALUE = 60;
-  // const TOP_VALUE = Platform.OS === 'ios' ? 60 : 20;
+  //const TOP_VALUE = 60;
+  const TOP_VALUE = Platform.OS === 'ios' ? 60 : 20;
   useImperativeHandle(
     ref,
     () => ({

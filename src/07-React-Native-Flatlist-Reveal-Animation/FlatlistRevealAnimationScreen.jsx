@@ -10,7 +10,7 @@ import {
 import React from 'react';
 import data from './src/data';
 import {MotiView} from 'moti';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native';
 
 const FlatlistRevealAnimationScreen = () => {
   const renderItem = ({item, index}) => {
@@ -37,9 +37,7 @@ const FlatlistRevealAnimationScreen = () => {
     );
   };
   return (
-    //If you're not using react-native-bars, you can remove these edges
-    // and import SafeAreaView from react-native.
-    <SafeAreaView style={styles.container} edges={['bottom', 'right', 'left']}>
+    <SafeAreaView style={styles.container}>
       <FlatList
         data={data}
         renderItem={renderItem}

@@ -11,8 +11,6 @@ This repository is a collection of results from the React Native Animation Tutor
 - [Lottie](https://github.com/lottie-react-native/lottie-react-native)
 - [D3](https://d3js.org/)
 
-This project uses react-native-bars to make the Status Bar and Navigation Bar on Android transparent
-
 ## Version
 
 The version used in this repository:

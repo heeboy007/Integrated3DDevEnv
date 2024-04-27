@@ -12,7 +12,7 @@ class MainActivity : ReactActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(null)
-    RNBars.init(this) // initialize react-native-bars
+    //RNBars.init(this) // initialize react-native-bars
   }
 
   /**

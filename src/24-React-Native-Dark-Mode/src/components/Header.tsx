@@ -1,4 +1,4 @@
-import {Image, Pressable, StyleSheet, View} from 'react-native';
+import {Image, Platform, Pressable, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
@@ -13,9 +13,7 @@ const Header = ({handlePress, theme}: Props) => {
     <View
       style={[
         theme === 'dark' ? darkStyles.container : styles.container,
-        //If you're not using react-native-bars, you can remove these edges
-        {paddingTop: insets.top + 10},
-        // {paddingTop: Platform.OS === 'ios' ? insets.top : 20},
+        {paddingTop: Platform.OS === 'ios' ? insets.top : 20},
       ]}>
       <Pressable style={styles.icon} onPress={handlePress}>
         <Image

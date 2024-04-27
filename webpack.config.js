@@ -122,6 +122,8 @@ module.exports = {
         // This will only alias the exact import "react-native"
         alias: {
             'react-native$': 'react-native-web',
+            'react-native-linear-gradient$': 'react-native-web-linear-gradient',
+            'react-native-svg$': 'react-native-svg-web',
             '@react-three/fiber/native$': '@react-three/fiber/native/dist/react-three-fiber-native.esm',
         },
         fallback: {
