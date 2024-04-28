@@ -1,14 +1,21 @@
 import {StyleSheet, Image, View} from 'react-native';
 import React, {useLayoutEffect, useState} from 'react';
 import Animated, {useAnimatedStyle, interpolate} from 'react-native-reanimated';
+import { Platform } from 'react-native';
 const CustomImage = ({item, x, index, size, spacer}) => {
   const [aspectRatio, setAspectRatio] = useState(1);
-
   // Get Image Width and Height to Calculate AspectRatio
   useLayoutEffect(() => {
     if (item.image) {
-      const {width, height} = Image.resolveAssetSource(item.image);
-      setAspectRatio(width / height);
+      if(Platform.OS === 'web') {
+        Image.getSize(item.image, (width, height) => {
+          setAspectRatio(width / height);
+        });
+      } else {
+        //this only works on native codes.
+        const {width, height} = Image.resolveAssetSource(item.image);
+        setAspectRatio(width / height);
+      }
     }
   }, [item.image]);
 
@@ -30,7 +37,7 @@ const CustomImage = ({item, x, index, size, spacer}) => {
     <View style={{width: size}} key={index}>
       <Animated.View style={[styles.imageContainer, style]}>
         <Image
-          source={item.image}
+          source={Platform.OS === 'web' ? item.image.default : item.image}
           style={[styles.image, {aspectRatio: aspectRatio}]}
         />
       </Animated.View>
