@@ -1,34 +1,17 @@
-# React Native Animation
+# Integrated 3D Development Environment(Template)
 
-This repository is a collection of results from the React Native Animation Tutorial on my YouTube Channel [Rakha Wibowo](https://www.youtube.com/@rakhawibowo) using :
+## Originally : React Native Animation
 
-- [React Native](https://reactnative.dev/)
-- [Reanimated](https://docs.swmansion.com/react-native-reanimated/)
-- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/docs/)
-- [React Native Skia](https://shopify.github.io/react-native-skia/)
-- [React Three Fiber](https://github.com/lottie-react-native/lottie-react-native)
-- [Moti](https://moti.fyi/)
-- [Lottie](https://github.com/lottie-react-native/lottie-react-native)
-- [D3](https://d3js.org/)
+- Original [Git Repo](https://github.com/Rakha112/react-native-animation/) is here.
+I ruined the git during the dev process, and failed to fork. But be sure to check on him!
 
-## Version
+## Available Tutorials(Not Mine)
 
-The version used in this repository:
-
-- React Native v0.73.6
-- Reanimated v3.8.1
-- React Native Gesture Handler v2.16.0
-- Moti v0.28.1
-- Lottie v6.7.0
-- React Three Fiber v8.16.1
-- React Three Drei v9.103.1
-- Three.js v0.162.0
-- Skia v1.0.5
-- D3 v7.9.0
-- React Native Bars v2.4.3
-
-## Available Tutorials
-
+<details>
+    <summary>Tutorials</summary>
+  
+  This repository is a collection of results from the React Native Animation Tutorial on his YouTube Channel [Rakha Wibowo](https://www.youtube.com/@rakhawibowo) 
+  
 - [React Native Custom Switch Using Reanimated 2](https://youtu.be/qDI5SQAb0vI)
 - [React Native Custom Animated Check Box Component Using SVG and Reanimated 2](https://youtu.be/8aax8SU0F2w)
 - [React Native Custom Image Carousel with Pagination and Auto Play using Reanimated 2](https://youtu.be/1XDMJI93p0I)
@@ -58,19 +41,85 @@ The version used in this repository:
 - [React Native Bar Chart With Skia And Reanimated From Scratch](https://youtu.be/vIuPJ_KDEz4)
 - [React Native Custom Carousel with Reanimated 3](https://youtu.be/5OkYf2yyrXs)
 - [React Native Line Chart With Reanimated 3, Skia and D3 From Scratch!!!](https://youtu.be/Wk51crQuqv4)
+  
+</details>
+
+## Dependency Version
+
+- [React Native](https://reactnative.dev/)
+- [Reanimated](https://docs.swmansion.com/react-native-reanimated/)
+- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/docs/)
+- [React Native Skia](https://shopify.github.io/react-native-skia/)
+- [React Three Fiber](https://github.com/lottie-react-native/lottie-react-native)
+- [Moti](https://moti.fyi/)
+- [Lottie](https://github.com/lottie-react-native/lottie-react-native)
+- [D3](https://d3js.org/)
+
+The version used in this repository:
+
+- React Native v0.73.6
+- React Native Web v0.19.6
+- Reanimated v3.6.2
+- React Native Gesture Handler v2.14.0
+- Moti v0.28.1
+- Lottie v6.7.0
+- React Three Fiber v8.16.1
+- React Three Drei v9.105.3
+9.103.1 doesn't go well with android, ios, web, had to upgrade.
+- Three.js v0.162.0
+- Skia v1.0.5
+- D3 v7.9.0
+- React Native Bars v2.4.3
+This is implemented ONLY for Android Edge-To-Edge Theme, which is every easy to use on AndroidManifest.xml
+
+Example checks :
+✅ : Everything is ok
+🔶 : Partial support, bug exists.
+🚫 : Straight up crahes
+🕐 : Not Tested Yet.
+
+| No.            | Android       | iOS           | Web            |
+| -------------- | ------------- | ------------- | -------------- |
+| 1 | ✅ | ✅ | ✅ |
+| 2 | ✅ | ✅ | 🔶 |
+| 3 | ✅ | ✅ | ✅ |
+| 4 | ✅ | ✅ | 🔶 |
+| 5 | ✅ | ✅ | 🔶 |
+| 6 | ✅ | ✅ | 🔶 |
+| 7 | ✅ | ✅ | 🔶 |
+| 8 | ✅ | ✅ | 🔶 |
+| 9 | ✅ | ✅ | 🔶 |
+| 10 | ✅ | 🕐 | 🔶 |
+| 11 | ✅ | 🕐 | 🚫 |
+| 12 | ✅ | 🕐 | 🕐 |
+| 13 | ✅ | 🕐 | 🕐 |
+| 14 | ✅ | 🕐 | 🕐 |
+| 15 | ✅ | ✅ | 🕐 |
+| 16 | ✅ | ✅ | 🕐 |
+| 17 | ✅ | ✅ | 🚫 |
+| 18 | ✅ | 🔶 | 🚫 |
+| 19 | ✅ | 🕐 | 🕐 |
+| 20 | ✅ | 🕐 | 🕐 |
+| 21 | ✅ | 🕐 | 🕐 |
+| 22 | ✅ | 🕐 | 🕐 |
+| 23 | ✅ | 🕐 | 🕐 |
+| 24 | ✅ | 🕐 | 🕐 |
+| 25 | ✅ | 🕐 | 🕐 |
+| 26 | ✅ | 🕐 | 🕐 |
+| 27 | ✅ | 🕐 | 🕐 |
+| 28 | ✅ | 🕐 | 🕐 |
+| 29 | ✅ | 🕐 | 🕐 |
+| 30 | ✅ | 🕐 | 🕐 |
+| 31 | ✅ | 🕐 | 🕐 |
+| 32 | ✅ | 🕐 | 🕐 |
 
 ## Run Locally
 
 Clone the project
 
 ```bash
-git clone https://github.com/Rakha112/react-native-animation.git
-```
-
-Go to the project directory
-
-```bash
-cd react-native-animation
+git clone https://github.com/heeboy007/Integrated3DDevEnv.git
+cd Integrated3DDevEnv
 ```
 
 Install dependencies
@@ -78,31 +127,60 @@ Install dependencies
 ```bash
 npm install
 ```
+or maybe this, if you prefer it this way.
+```bash
+npx expo install
+```
 
-For iOS
-
+For iOS, extra steps : (if you have mac)
 ```bash
 npx pod-install
 ```
 
-Start the server
+Start the server(for native builds for android or ios)
+```bash
+npm run native
+```
+you can press a or i after this to build out apps by react-native's internal build method.
+
+#### Run on IOS
 
 ```bash
-npm start -- --reset-cache
+npm run ios
 ```
-
-Run on IOS
+Disclaimer : I've never tested on react-native by xcode, since i don't have mac on my hands now.
+But you could still try physical testing on expo go.
 
 ```bash
-npx react-native run-ios
+npm start
 ```
+to start up the expo server, and download Expo Go on your testing device,
+scan it, then you can test the app for ios.
 
-Run on ANDROID
+#### Run on ANDROID
 
 ```bash
-npx react-native run-android
+npm run android
 ```
 
-## The app
+#### Run on Web
 
-![Demo](https://github.com/Rakha112/react-native-animation/blob/main/ImageDemo.png)
+```bash
+npm run webpack
+```
+i've managed to bundle the whole thing by webpack, but it's very buggy for now.
+
+
+
+## Preview
+
+Web Version(Ubuntu, webpack, chrome)
+![image](https://github.com/heeboy007/Integrated3DDevEnv/assets/41155496/5ba456d2-cd33-4183-9582-8b650eff60d3)
+
+iOS Version(Physical, iPad Air gen 5, expo go)
+![image](https://github.com/heeboy007/Integrated3DDevEnv/assets/41155496/32684b23-b764-41ea-ac3b-22f922756af6)
+
+Android version(Physical, SM-A805N, os version 11)
+![Screenshot_20240429-013055_ReactNativeAnimation.jpg](https://github.com/heeboy007/Integrated3DDevEnv/assets/41155496/10022775-84b3-4eae-82fa-adc2772615df)
+
+
